@@ -1,0 +1,133 @@
+h2 {
+  width: 100%;
+  text-align: center;
+  border-bottom: 1px solid #28a745;
+  padding: 10px;
+}
+
+label {
+  margin-left: 5px;
+}
+
+.display-none {
+  display: none !important;
+}
+
+.main-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.filters-container {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 20%;
+  height: 50vh;
+  border-right: 1px solid #28a745;
+  border-bottom: 1px solid #28a745;
+  background-color: white;
+}
+
+.filter-item {
+  margin: auto;
+}
+
+.filters-buttons {
+  display: flex;
+  justify-content: space-around;
+  margin: 5px;
+}
+
+.clear-filters, .apply-filters {
+  width: 45%;
+}
+
+.products-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 70%;
+  margin: 50px auto;
+}
+
+.product-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
+  width: 30%;
+  height: 300px;
+  margin: 10px auto;
+  border: 1px solid #28a745;
+  border-radius: 5px;
+  border-top: 5px solid #28a745;
+}
+
+.product-item:hover {
+  box-shadow: 0px 0px 5px #28a745;
+}
+
+.product-name {
+  width: 95%;
+  font-size: 1rem;
+}
+
+.product-description {
+  width: 95%;
+  font-size: 0.75rem;
+  font-weight: lighter;
+  overflow: scroll;
+}
+
+.product-price {
+  width: 95%;
+}
+
+.product-image {
+  max-height: 100px;
+  overflow: hidden;
+}
+
+.product-image img:hover {
+  transform: scale(1.5);
+}
+
+.product-image img {
+  width: 100%;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+
+.product-button {
+
+}
+
+@media screen and (max-width: 700px) {
+
+  .main-container {
+    flex-direction: column;
+  }
+
+  .products-container {
+    flex-direction: column;
+  }
+
+  .product-item {
+    width: 80%;
+    margin: 10px auto;
+  }
+
+  .filters-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    border-bottom: 1px solid #28a745;
+  }
+}

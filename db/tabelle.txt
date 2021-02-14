@@ -1,0 +1,101 @@
+create table AULA (
+     idAula double(4,2) not null,
+	 locazione varchar(30) not null,
+     constraint IDAULA primary key (idAula));
+
+create table CARRELLO (
+     idCarrello smallint(8) not null,
+     email varchar(30) not null,
+     constraint IDCARRELLO primary key (idCarrello),
+     constraint FKpossiede_ID unique (email));
+
+create table CLIENTE (
+     email varchar(30) not null,
+     nome varchar(16) not null,
+     cognome varchar(16) not null,
+     constraint FKUTE_CLI_ID primary key (email));
+
+create table AMMINISTRATORE (
+     email varchar(30) not null,
+     telefono varchar(10) not null,
+     constraint FKUTE_AMM_ID primary key (email));
+
+create table FATTORINO (
+     email varchar(30) not null,
+     nome varchar(16) not null,
+     cognome varchar(16) not null,
+     Dis_email varchar(30) not null,
+     constraint FKUTE_FAT_ID primary key (email));
+
+create table FORNITORE (
+     email varchar(30) not null,
+     nome varchar(16) not null,
+     cognome varchar(16) not null,
+     CF varchar(16) not null,
+     P_IVA varchar(8) not null,
+     telefono varchar(10) not null,
+	 ristorante varchar(30) not null,
+	 immagine varchar(300) not null,
+	 descrizione varchar(100) not null,
+     constraint FKUTE_FOR_ID primary key (email));
+
+create table LISTINO (
+     idListino smallint(8) not null,
+     email varchar(30) not null,
+     constraint IDLISTINO primary key (idListino),
+     constraint FKfornisce_ID unique (email));
+
+create table ORDINE (
+     idOrdine smallint(8) not null,
+     data varchar(10) not null,
+     ora varchar(5) not null,
+     prezzo_tot double(4,2) not null,
+     fornitore_email varchar(30) not null,
+     cliente_email varchar(30) not null,
+	 fattorino_email varchar(30) not null,
+     idAula double(4,2) not null,
+	 stato varchar(30) not null,
+     constraint IDORDINE primary key (idOrdine));
+
+create table PRODOTTO (
+     idProdotto smallint(8) not null,
+     immagine varchar(100) not null,
+     nome varchar(30) not null,
+     prezzo double(4,2) not null,
+     tipo varchar(30) not null,
+     descrizione varchar(60) not null,
+     idListino smallint(8) not null,
+     constraint IDPRODOTTO primary key (idProdotto));
+	 
+create table PRODOTTO_ORDINATO (
+     idProdotto_ordinato smallint(8) not null,
+     porzioni smallint(4) not null,
+     prezzo_tot double(4,2) not null,
+     idProdotto smallint(8) not null);
+
+create table PRODOTTO_IN_CARRELLO (
+     idCarrello smallint(8) not null,
+     idProdotto_in_carrello smallint(8) not null,
+     porzioni smallint(4) not null,
+     prezzo_tot double(4,2) not null,
+     idProdotto smallint(8) not null);
+
+create table UTENTE (
+     email varchar(30) not null,
+     password varchar(20) not null,
+     FATTORINO varchar(30),
+     FORNITORE varchar(30),
+     CLIENTE varchar(30),
+     constraint IDUTENTE primary key (email));
+	 
+create table SESSION (
+     email varchar(30) not null,
+     tipo varchar(20) not null,
+	 nome varchar(20) not null,
+	 forn_email varchar(30) not null,
+	 IDLISTINO varchar(30),
+     IDCARRELLO varchar(30),
+     constraint IDSESSION primary key (email));
+	 
+create table notifiche( idOrdine smallint(8) not null, forn_email varchar(30) not null, cli_email varchar(30) not null, stato varchar(20) not null,
+constraint IDNOTIFICHE primary key (idOrdine));

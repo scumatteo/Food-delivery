@@ -1,0 +1,212 @@
+h2 {
+  width: 100%;
+  text-align: center;
+  border-bottom: 1px solid #28a745;
+  padding: 10px;
+}
+
+label {
+  margin-left: 5px;
+}
+
+.down {
+  border: solid black;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 3px;
+  margin-left: 10px;
+  margin-bottom: 5px;
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  display: none;
+}
+
+.display-none {
+  display: none !important;
+}
+
+.main-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: rgb(250, 245, 245);
+}
+
+.filters-container {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 20%;
+  height: 50vh;
+  border-right: 1px solid #28a745;
+  border-bottom: 1px solid #28a745;
+  background-color: white;
+  transition: 0.4s;
+}
+
+.filter-item {
+  margin: auto;
+}
+
+.filters-buttons {
+  display: flex;
+  justify-content: space-around;
+  margin: 5px;
+}
+
+.clear-filters, .apply-filters {
+  width: 45%;
+}
+
+.products-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 70%;
+  margin: 50px auto;
+}
+
+.product-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
+  width: 30%;
+  height: 300px;
+  margin: 10px auto;
+  border: 1px solid rgb(200, 200, 200);
+  border-radius: 5px;
+  background-color: white;
+  border-top: 5px solid #28a745;
+  box-shadow: 0 0 5px #DCDCDC;
+}
+
+.product-name {
+  width: 95%;
+  font-size: 1rem;
+  margin: auto;
+}
+
+.product-description {
+  width: 95%;
+  font-size: 0.75rem;
+  font-weight: lighter;
+  overflow: scroll;
+  margin: auto;
+}
+
+.product-price {
+  width: 95%;
+  margin: auto;
+}
+
+.product-image {
+  max-height: 100px;
+  overflow: hidden;
+}
+
+.product-image img:hover {
+  transform: scale(1.5);
+}
+
+.product-image img {
+  width: 100%;
+  transition: 0.3s;
+}
+
+.product-counter {
+  margin: auto;
+  width: 20%;
+}
+
+.product-button {
+
+}
+
+.sidebar-cart {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  top: 0;
+  left: auto;
+  right: 0;
+  background-color: white;
+  overflow-x: hidden;
+  z-index: 5;
+  transition: 0.5s;
+  padding-top: 60px;
+  background-image: url('http://www.pakistanwebonline.com/wp-content/uploads/2016/02/Healthy-Food-800x445.jpg');
+  background-repeat: no-repeat;
+  background-position: left bottom;
+  background-size: 100% 40%;
+}
+
+.sidebar-cart a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidebar-cart a:hover {
+  color: #f1f1f1;
+}
+
+.sidebar-cart .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+.control-cart-btns{
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+#delete-cart, #ok-cart {
+  margin-right: 10px;
+  margin-bottom: 15px;
+}
+
+#ok-cart{
+  margin-right: 20px;
+}
+
+@media screen and (max-width: 700px) {
+
+  .down {
+    display: inline-block;
+  }
+
+  .main-container {
+    flex-direction: column;
+  }
+
+  .products-container {
+    flex-direction: column;
+  }
+
+  .product-item {
+    width: 80%;
+    margin: 10px auto;
+  }
+
+  .filters-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    height: 60px;
+    overflow: hidden;
+    border-bottom: 1px solid #28a745;
+  }
+}

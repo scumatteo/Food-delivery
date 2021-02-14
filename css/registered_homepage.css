@@ -1,0 +1,216 @@
+::-webkit-scrollbar {
+    display: none;
+}
+
+body {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+.shortcuts nav {
+  border: none;
+}
+
+.navbar {
+  font-size: 1.5rem;
+}
+
+nav {
+  width: 100%;
+  border-bottom-style: solid;
+  border-bottom-width: thin;
+  border-bottom-color: #017cff;
+}
+
+.navbar a {
+  color: #017cff;
+}
+
+.navbar img {
+  max-height: 50px;
+}
+
+.navbar-nav {
+  flex-direction: row;
+}
+
+.sidebar-cart {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  top: 0;
+  left: auto;
+  right: 0;
+  background-color: white;
+  overflow-x: hidden;
+  z-index: 5;
+  transition: 0.5s;
+  padding-top: 60px;
+  background-image: url('http://www.pakistanwebonline.com/wp-content/uploads/2016/02/Healthy-Food-800x445.jpg');
+  background-repeat: no-repeat;
+  background-position: left bottom;
+  background-size: 100% 40%;
+}
+
+.sidebar-cart a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidebar-cart a:hover {
+  color: #f1f1f1;
+}
+
+.sidebar-cart .closebtn {
+  position: absolute;
+  top: 0;
+  right: 2%;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+#label-cart {
+  position: absolute;
+  left: 40%;
+}
+
+.card{
+  cursor: pointer;
+}
+
+.card-group {
+  margin-top: 15%;
+}
+
+.account-list-container{
+  display: none;
+}
+
+.account-list{
+  list-style: none;
+}
+
+.dropdown-toggle::after {
+    display:none;
+}
+
+.card-group{
+  min-width: 300px;
+}
+
+.cart-card{
+  margin-top: 5px;
+  border-bottom: medium solid blue;
+}
+
+.card-state{
+  margin: 5px;
+  padding: 10px;
+  border: 1px solid #017cff;
+  border-radius: 10px 10px 10px 10px;
+}
+
+@media screen and (max-height: 700px) {
+  .sidebar-cart {padding-top: 15px;}
+  .sidebar-cart a {font-size: 18px;}
+}
+
+#cart-cards a{
+  padding: 4px 2px;
+}
+
+#cart-cards p{
+  padding: 5px;
+}
+
+#cart-cards h5{
+  padding-left: 2px;
+}
+
+#cart-cards span{
+  padding-right: 2px;
+}
+
+.control-cart-btns{
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+#delete-cart, #ok-cart {
+  margin-right: 10px;
+  margin-bottom: 15px;
+}
+
+#ok-cart{
+  margin-right: 20px;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+
+}
+
+.dropdown-content {
+  visibility: hidden;
+  right: 0px;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 50px;
+  min-height: 50px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  padding: 12px 16px;
+  z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+  visibility: visible;
+}
+
+.nav-guest-items li{
+  -moz-transition: all 0.2s ease-out 0s;
+  -webkit-transition: all 0.2s ease-out 0s;
+  transition: all 0.2s ease-out 0s;
+}
+.nav-guest-items li:hover{
+  color: #1d2939;
+  background-color: #f7f7f7;
+}
+
+/* BELL ICON */
+
+#notification-bell {
+    position: relative;
+}
+
+.badge {
+    position: absolute;
+    top: 5px;
+    left: 70%;
+    display:inline-block;
+    min-width:10px;
+    padding:3px 7px;
+    font-size:12px;
+    font-weight:700;
+    line-height:1;
+    color:#fff;
+    text-align:center;
+    white-space:nowrap;
+    vertical-align:baseline;
+    background-color:rgb(255, 0, 6, 1);
+    border-radius:10px;
+}
+#notification-list{
+  width:200px;
+}
+
+#notification-list a{
+  font-size: 3vw;
+}
+
+</style>

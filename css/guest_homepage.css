@@ -1,0 +1,371 @@
+body {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+section{
+  text-align: center;
+}
+
+.navbar {
+  font-size: 1.5rem;
+}
+
+nav {
+  width: 100;
+  border-bottom-style: solid;
+  border-bottom-width: thin;
+  border-bottom-color: #017cff;
+}
+
+.navbar a {
+  color: #017cff;
+}
+
+.navbar img {
+  max-height: 50px;
+}
+
+/*
+#placeholder{
+  width: 35px;
+}*/
+
+#campus{
+  width: 30%;
+  max-width: 300px;
+  opacity: 0.9;
+}
+
+section>div>div{
+  margin: 10px 5px;
+}
+
+.user-modal {
+    display: flex;
+    visibility: hidden;
+    opacity: 0;
+    position: fixed;
+    color: white;
+    z-index: 200;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+    -webkit-transition: 0.5s;
+    transition: 0.4s;
+}
+
+.user-modal-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
+  background-color: #28a745;
+  margin: auto;
+  top: 10px;
+  padding: 20px;
+  border: 0.5px solid white;
+  border-radius: 2px;
+  width: 100%;
+  height: 100%;
+}
+
+.user-modal-content h2 {
+  position: relative;
+  opacity: 0;
+  font-size: 5vw;
+  font-weight: lighter;
+}
+
+.user-modal-content p {
+  position: relative;
+  opacity: 0;
+  font-size: 8vw;
+  font-weight: lighter;
+}
+
+.user-modal-content #popupInput {
+  position: relative;
+  opacity: 0;
+  font-size: 2vw;
+}
+
+.modal-close {
+  align-self: flex-end;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.modal-close:hover,
+.modal-close:focus {
+    color: #f2f2f2;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.user-modal-content .fas {
+  transition: 0.4s;
+}
+
+.user-modal-content .fas:hover{
+  border-radius: 100px;
+  -webkit-box-shadow: 0px 8px 40px 0px rgba(180,180,180,1);
+  -moz-box-shadow: 0px 8px 40px 0px rgba(180,180,180,1);
+  box-shadow: 0px 8px 40px 0px rgba(180,180,180,1);
+}
+
+.user-modal-content select {
+  width: 75%;
+  -webkit-appearance: none;
+  background-color: transparent;
+  color: white;
+  background-color: #0a5e23;
+  border: transparent;
+  border-radius: 0px;
+  border-bottom: 1px solid white;
+  position: relative;
+  bottom: 10px;
+  font-weight: lighter;
+}
+
+.user-modal-content input {
+  width: 75%;
+  -webkit-appearance: none;
+  background-color: transparent;
+  color: white;
+  border: transparent;
+  border-radius: 0px;
+  border-bottom: 1px solid white;
+  position: relative;
+  bottom: 10px;
+  font-weight: lighter;
+}
+
+.user-modal-content input::placeholder {
+  color: white;
+  opacity: 0.8;
+}
+
+.move-up {
+	animation-name: move-up;
+	animation-duration: 1s;
+	animation-fill-mode: forwards;
+}
+
+.breadcrumb-container{
+  display: flex;
+  flex-flow: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+.breadcrumb-container-login{
+  display: flex;
+  flex-flow: row;
+  justify-content: center;
+}
+
+.breadcrumb-container>div, .breadcrumb-container-login>div{
+  display: inline-block;
+  position: relative;
+  height: 25px;
+  line-height: 25px;
+  padding: 0 20px;
+  border: 1px solid #ccc;
+  margin-right: 2px;
+  background-color: white;
+  margin: 10px;
+}
+
+.breadcrumb-container>div:before, .breadcrumb-container-login>div:before {
+  content: '';
+  border-top: 1px solid #ccc;
+  border-right: 1px solid #ccc;
+  width: 18px;
+  height: 18px;
+  position: absolute;
+  left: 0;
+  top: -1px;
+  background-color: #28a745;
+  z-index: 50;
+  -webkit-transform: translate(-10px,4px) rotate(45deg);
+  -moz-transform: translate(-10px,4px) rotate(45deg);
+  -ms-transform: translate(-10px,4px) rotate(45deg);
+  -o-transform: translate(-10px,4px) rotate(20deg);
+  transform: translate(-10px,4px) rotate(45deg);
+}
+
+.breadcrumb-container>div:after, .breadcrumb-container-login>div:after {
+  content: '';
+  border-top: 1px solid #ccc;
+  border-right: 1px solid #ccc;
+  width: 18px;
+  height: 18px;
+  position: absolute;
+  right: 0;
+  top: -1px;
+  background-color: white;
+  z-index: 150;
+  -webkit-transform: translate(10px,4px) rotate(45deg);
+  -moz-transform: translate(10px,4px) rotate(45deg);
+  -ms-transform: translate(10px,4px) rotate(45deg);
+  -o-transform: translate(10px,4px) rotate(20deg);
+  transform: translate(10px,4px) rotate(45deg);
+}
+
+.active {
+  opacity: 1;
+}
+
+.inactive {
+  opacity: 0.4;
+  border: none;
+}
+
+.active:hover, .active-login:hover{
+  -webkit-box-shadow: 0px 8px 40px 0px rgba(180,180,180,1);
+  -moz-box-shadow: 0px 8px 40px 0px rgba(180,180,180,1);
+  box-shadow: 0px 8px 40px 0px rgba(180,180,180,1);
+}
+
+.login-modal {
+    display: flex;
+    visibility: hidden;
+    opacity: 0;
+    position: fixed;
+    color: white;
+    z-index: 200;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+    -webkit-transition: 0.5s;
+    transition: 0.4s;
+}
+
+.login-modal-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
+  background-color: #28a745;
+  margin: auto;
+  top: 10px;
+  padding: 20px;
+  border: 0.5px solid white;
+  border-radius: 2px;
+  width: 100%;
+  height: 100%;
+}
+
+.login-modal-content h2 {
+  position: relative;
+  opacity: 0;
+  font-size: 5vw;
+  font-weight: lighter;
+}
+
+.login-modal-content p {
+  position: relative;
+  opacity: 0;
+  font-size: 8vw;
+  font-weight: lighter;
+}
+
+.login-modal-content #loginPopupInput {
+  position: relative;
+  opacity: 0;
+  font-size: 2vw;
+}
+
+.login-modal-close {
+  align-self: flex-end;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.login-modal-close:hover,
+.login-modal-close:focus {
+    color: #f2f2f2;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.login-modal-content .fas {
+  transition: 0.4s;
+}
+
+.login-modal-content .fas:hover{
+  border-radius: 100px;
+  -webkit-box-shadow: 0px 8px 40px 0px rgba(180,180,180,1);
+  -moz-box-shadow: 0px 8px 40px 0px rgba(180,180,180,1);
+  box-shadow: 0px 8px 40px 0px rgba(180,180,180,1);
+}
+
+.login-modal-content select {
+  width: 75%;
+  -webkit-appearance: none;
+  background-color: transparent;
+  color: white;
+  border: transparent;
+  border-radius: 0px;
+  border-bottom: 1px solid white;
+  position: relative;
+  bottom: 10px;
+  font-weight: lighter;
+}
+
+.login-modal-content input {
+  width: 75%;
+  -webkit-appearance: none;
+  background-color: transparent;
+  color: white;
+  border: transparent;
+  border-radius: 0px;
+  border-bottom: 1px solid white;
+  position: relative;
+  bottom: 10px;
+  font-weight: lighter;
+}
+
+.login-modal-content input::placeholder {
+  color: white;
+  opacity: 0.8;
+}
+
+@keyframes move-up {
+	from {top: 75px; opacity: 0;}
+  to {top: 0px; opacity: 1;}
+}
+
+@media screen and (max-width: 700px) {
+  .user-modal-content h2 {
+    font-size: 6vw;
+  }
+  .user-modal-content p {
+    font-size: 15vw;
+  }
+  .user-modal-content #popupInput {
+    font-size: 8vw;
+  }
+  .login-modal-content h2 {
+    font-size: 6vw;
+  }
+  .login-modal-content p {
+    font-size: 15vw;
+  }
+  .login-modal-content #loginPopupInput {
+    font-size: 8vw;
+  }
+  h1{
+    font-size: 8vw;
+  }
+}
